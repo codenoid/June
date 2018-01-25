@@ -1,0 +1,13 @@
+name: June
+version: 0.1.0
+
+authors:
+  - Rubi Jihantoro <jihantoro8@gmail.com>
+
+targets:
+  June:
+    main: src/June.cr
+
+crystal: 0.24.1
+
+license: MIT
