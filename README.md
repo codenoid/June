@@ -48,3 +48,4 @@ curl -d "url=https://shopee.co.id" -X POST http://localhost:3000/
 ## Contributors
 
 - [codenoid](https://github.com/codenoid) Rubi Jihantoro - creator, maintainer
+- Thanks ! [ysbaddaden](https://github.com/ysbaddaden)
