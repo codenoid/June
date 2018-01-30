@@ -1,20 +1,39 @@
 # June
 
-a READ-ONLY Selenium Wire Protocol, usually for data scrapping
+a READ-ONLY Selenium, with an HTTP API
 
 ## Installation
 
-wait
+```
+git clone https://github.com/codenoid/June.git
+cd June
+make
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Start a new June server
+
+```
+june --browser 2 --port 3000
+```
+
+`--browser` for starting june with 2 active browser
+
+`--port` define port for HTTP API
+
+2. Do POST request (application/x-www-form-urlencoded) with params url
+
+```
+curl -d "url=https://shopee.co.id" -X POST http://localhost:3000/
+```
 
 ## Development
 
-- [ ] Customizable
-- [ ] Multiple Instance
-- [ ] Balancing
+- [x] Customizable
+- [x] Multiple Browser
+- [x] Balancing
+- [ ] Debug Mode
 - [ ] Validation
 - [ ] Test
 

@@ -1,5 +1,3 @@
-require "http"
-require "json"
 require "./errors.cr"
 
 module June
@@ -21,29 +19,24 @@ module June
       }
 
       response = post("/session", body)
-      @id = response["sessionId"].to_s.as(String)
-      @id
+      response["sessionId"].to_s.as(String) || nil
     end
 
     def check
       get("/sessions")
     end
 
-    def url
-      get("/session/#{@id}/url").as(String)
+    def url(id, url)
+      post("/session/#{id}/url", {url: url})
     end
 
-    def url=(url)
-      post("/session/#{@id}/url", {url: url})
-    end
-
-    def source
-      body = get("/session/#{@id}/source")
+    def source(id)
+      body = get("/session/#{id}/source")
       body["value"]
     end
 
-    def close
-      delete("/session/#{@id}")
+    def close(id)
+      delete("/session/#{id}")
     end
 
     def get(path)
