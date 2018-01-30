@@ -7,7 +7,7 @@ a READ-ONLY Selenium, with an HTTP API
 ```
 git clone https://github.com/codenoid/June.git
 cd June
-make
+sudo make
 ```
 
 ## Usage

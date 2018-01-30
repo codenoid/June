@@ -30,6 +30,7 @@ install:
 	  	build-essential -y
 		apt-get install crystal
 	fi
+	apt-get install firefox
 	crystal -v
 	crystal build src/June.cr --release --no-debug
 	mv June june
