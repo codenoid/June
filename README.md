@@ -2,6 +2,13 @@
 
 a READ-ONLY Selenium, with an HTTP API
 
+## Requirements
+
+1. Firefox Browser
+2. [Geckodriver](https://github.com/mozilla/geckodriver/releases) move to `/usr/bin`
+3. Java (tested on Java 8)
+4. [Selenium](http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar)
+
 ## Installation
 
 ```
@@ -15,6 +22,7 @@ sudo make
 1. Start a new June server
 
 ```
+java -jar selenium-server-standalone-3.8.1.jar & # or start inside `screen`
 june --browser 2 --port 3000
 ```
 
@@ -33,6 +41,7 @@ curl -d "url=https://shopee.co.id" -X POST http://localhost:3000/
 - [x] Customizable
 - [x] Multiple Browser
 - [x] Balancing
+- [ ] "Remove" Requirements
 - [ ] Debug Mode
 - [ ] Validation
 - [ ] Test
